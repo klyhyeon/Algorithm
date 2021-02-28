@@ -1,11 +1,11 @@
-package BaekJoon;
+package baekJoon.week1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 //#2747
-public class Fibonacci2747 {
+public class Fibonacci10870 {
 
     public static void main(String[] args) {
         //Fn = Fn-1 + Fn+1
