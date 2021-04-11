@@ -15,15 +15,15 @@ public class Test4Watcha {
         ArrayList<Double> scoreList = new ArrayList<>();
         while (st.hasMoreTokens()) {
             scoreList.add(Double.parseDouble(st.nextToken()));
-        }
-        st = new StringTokenizer(br.readLine());
-        int y = Integer.parseInt(st.nextToken());
-        int x = Integer.parseInt(st.nextToken());
-        char[][] watchInfo = new char[x][y];
-        for (int i = 0; i < y; i++) {
-            String watchInfoLine = br.readLine();
-            for (int j = 0; j < x; j++) {
-                watchInfo[i][j] = watchInfoLine.charAt(j);
+            }
+            st = new StringTokenizer(br.readLine());
+            int y = Integer.parseInt(st.nextToken());
+            int x = Integer.parseInt(st.nextToken());
+            char[][] watchInfo = new char[x][y];
+            for (int i = 0; i < y; i++) {
+                String watchInfoLine = br.readLine();
+                for (int j = 0; j < x; j++) {
+                    watchInfo[i][j] = watchInfoLine.charAt(j);
             }
         }
         char[][] genreInfo = new char[x][y];
