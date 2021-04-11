@@ -29,7 +29,9 @@ public class PostTest3Brandy {
             dp[row][column] = map[row][column] + MAX(map[row-1][column],dp[row][column-1])
          */
         int[][] dp = new int[row][col];
-        dp[row][col] = map[row][col] + Math.max(dp[row-1][col], dp[row][col-1]);
+        if (col <= 0 || row <= 0)
+            dp[row][col] = map[row][col];
+        dp[row][col] = map[row][col] + Math.max(getMaxClothes(dp, row-1, col), getMaxClothes(dp, row, col-1));
         return dp[row-1][col-1];
     }
 }
