@@ -29,14 +29,14 @@ public class PostTest3Brandy {
     public static int getMaxClothes(int[][] map, int[][] dp, int col, int row) {
         if (col == 0 && row == 0) {
             return map[row][col];
-        } else if (col == 0 && row == 1) {
+        } else if (col == 0 && row != 0) {
             dp[row][col] = map[row][col] + map[row-1][col];
             return dp[row][col];
-        } else if (row <= 0 && col == 1) {
+        } else if (col != 0 && row == 0) {
             dp[row][col] = map[row][col] + map[row][col-1];
             return dp[row][col];
         }
-        dp[row][col] = map[row][col] + Math.max(getMaxClothes(map, dp, row-1, col), getMaxClothes(map, dp, row, col-1));
+        dp[row][col] = map[row][col] + Math.max(getMaxClothes(map, dp, col-1, row), getMaxClothes(map, dp, col, row-1));
         return dp[row][col];
     }
 }
